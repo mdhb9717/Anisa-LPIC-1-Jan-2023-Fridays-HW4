@@ -6,7 +6,7 @@
  - **Command:** `dd if=/dev/sda of=/dev/sdb status=progress`
 
 - **Outcome:** 
-![outcome](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Task1")
+![outcome](https://github.com/mdhb9717/Anisa-LPIC-1-Jan-2023-Fridays-HW4/blob/main/Task1.png?raw=true "Task1")
 
 ## Task 2: Number and address of a file's hard links and soft links
 
@@ -14,14 +14,14 @@ First to list all of the hard links of a file we need its inode number. We can g
  - **Final command:** `find -inum INODE_NUMBER`
 
 - **Outcom:**
-![outcome](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Task2-1")
+![outcome](https://github.com/mdhb9717/Anisa-LPIC-1-Jan-2023-Fridays-HW4/blob/main/Task2-1.png?raw=true "Task2-1")
 
 Now to find all of the soft links of a file we can use `find -type l` command that will show symbolic links for the address we give it `/` because we want it to search through all the system then we use `-ls` option too because it will show more details which contain the name of the original file and then redirect the errors to `/dev/null`. Now it will show us all the soft links that we can see on the system. All we need to do is to pipe the outcome to `grep` command and filter out our wanted links by the original file's name.
 
 - **Final Command:** `find / -type l -ls 2> /dev/null | grep \bFILE_NAME\b`
 
 - **Outcome:** 
-![outcome](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Task2-2")
+![outcome](https://github.com/mdhb9717/Anisa-LPIC-1-Jan-2023-Fridays-HW4/blob/main/Task2-2.png?raw=true "Task2-2")
 
 ## Task 3: Hard links for directories yes or no? How and Why?
 
